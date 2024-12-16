@@ -6,7 +6,7 @@ const cardEcommerce = (data) => {
     const cardEcommerce = `
         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="${linkToProductDetails}">
-                <img class="p-8 rounded-t-lg h-44 mx-auto" src="${data.image}" alt="product image" />
+                <img class="p-8 rounded-t-lg h-44 mx-auto mix-blend-mode" src="${data.image}" alt="product image" />
             </a>
             <div class="px-5 pb-5">
                 <a href="#">

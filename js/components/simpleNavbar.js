@@ -1,6 +1,7 @@
-import { $ } from "../utils.js"
+import { $, setTheme } from "../utils.js"
 
 const simpleNavbar = (title) => {
+  setTheme()
   const backTo = location.pathname == '/pagamento.html' ? 'carrinho' : 'produtos'
   
   const simpleNavbar = `

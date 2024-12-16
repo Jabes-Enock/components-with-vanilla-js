@@ -4,7 +4,7 @@ import { createNavigator } from '../components/navigation.js'
 import { spinner } from '../components/spinners.js'
 
 import { fakeStore } from '../controllers/fakestore.js'
-import { $, param } from '../utils.js'
+import { $, param, setTheme } from '../utils.js'
 
 createNavigator()
 
@@ -26,7 +26,7 @@ const insertProductsIntoView = async (controller) => {
   if(!products) return location.href = 'produtos.html'
 
   const toolbar = `
-      <nav class="fixed border-b top-16 left-0 right-0 bg-white border-gray-200 dark:bg-gray-900">
+      <nav class="fixed border-b dark:border-gray-700 top-16 left-0 right-0 bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-sm flex flex-wrap items-center mx-auto p-4 gap-x-2 gap-y-4">
           ${categories.map(item => badge(item))}
         </div>
@@ -43,6 +43,9 @@ const insertProductsIntoView = async (controller) => {
   products.forEach(item => {
     $('main section').innerHTML += cardEcommerce(item)
   })
+
+  
+  setTheme()
 }
 
 insertProductsIntoView(fakeStore)

@@ -1,7 +1,7 @@
 import { main } from '../components/index/main.js'
 import { createNavigator } from '../components/navigation.js'
 
-import { $ } from '../utils.js'
+import { $, setTheme } from '../utils.js'
 
 const insertSectionIntoView = () => {
    $('main').innerHTML = main()

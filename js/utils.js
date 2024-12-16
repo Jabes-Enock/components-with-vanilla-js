@@ -31,13 +31,51 @@ const calculateTax = (orderTotalPrice) => {
   return totalTax.toFixed(2)
 }
 
+const setTheme = () => {
+  const localTheme = localStorage.getItem('theme') || false
 
+  if (localTheme) {
+    if (localTheme === 'light') {
+      $('html').classList.remove('dark')
+    }
 
+    if (localTheme === 'dark') {
+      $('html').classList.add('dark')
 
+      const interval = setInterval(() => {
+        if($('#toggle_theme')) {
+          $('#toggle_theme').setAttribute('checked', true)
+        }
+        clearInterval(interval)
+      }, 100)
+    }
+  }
+}
+
+const addEventToThemeButton = () => {
+  const interval = setInterval(() => {
+    const btnToggleTheme = document.getElementById('toggle_theme')
+    btnToggleTheme.addEventListener('change', (e) => {
+
+      if (!btnToggleTheme.checked) {
+        $('html').classList.remove('dark')
+        localStorage.removeItem('theme')
+        return
+    }
+
+      $('html').classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    })
+    clearInterval(interval)
+
+  }, 100)
+}
 
 export {
   $,
   currencyBRL,
   param,
-  calculateTax
+  calculateTax,
+  setTheme,
+  addEventToThemeButton
 }

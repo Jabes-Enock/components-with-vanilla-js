@@ -1,13 +1,13 @@
 const main = () => {
   const section = `
-   <div class="max-w-screen-xl px-4 mx-auto mt-8 sm:mt-12 sm:px-6 md:px-16 md:mt-16">
+   <div class="max-w-screen-xl px-4 mx-auto mt-16 sm:mt-12 sm:px-6 md:px-16 ">
       <div class="">
-        <div class="text-center md:max-w-2xl md:mx-auto">
+        <div class="text-center md:max-w-2xl md:mx-auto space-y-8">
           <div class="text-sm font-semibold tracking-wide text-gray-500 uppercase sm:text-base lg:text-sm xl:text-base">
             Componentização com
           </div>
           <h2
-            class="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
+            class="mt-1 text-4xl dark:text-white font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             Vanilla JS
           </h2> 
           <p class="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl pr-14">
